@@ -88,14 +88,17 @@ Clone the GitHub Repository:
 ```
 git clone https://github.com/kissasium/CloupComputingProject.git
 cd CloupComputingProject
+```
 
 Build Docker Image:
 ```
 docker build -t flask-backend .
+```
 Run Flask App in Docker:
 
 ```
 docker run -p 5000:5000 flask-backend
+```
 
 The Flask application will now be accessible via the EC2 public IP on port 5000 (e.g., http://3.105.45.13:5000).
 
@@ -113,7 +116,7 @@ Set up PostgreSQL on Amazon RDS for database management.
 
 3. Configure the database instance (DB instance identifier, username, password, etc.).
 
-4 Ensure the RDS instance is created inside the same VPC as the EC2 instance for private connectivity.
+4. Ensure the RDS instance is created inside the same VPC as the EC2 instance for private connectivity.
 
 **Access Database:**
 
