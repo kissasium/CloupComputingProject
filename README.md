@@ -24,34 +24,31 @@ Database: Amazon RDS (PostgreSQL) for storing application data.
 
 File Storage: Amazon S3 for uploading and storing files.
 
-
-
 Step-by-Step Deployment Guide
 1. Setting Up AWS Services
 Elastic Beanstalk (Frontend)
 Elastic Beanstalk is used to deploy and manage the frontend (static HTML/CSS/JS) with auto-scaling and load balancing. Follow these steps to deploy the frontend:
 
 Install the EB CLI:
-
-bash
-Copy
-Edit
+```
 pip install awsebcli
+
+
 Initialize the Elastic Beanstalk Application:
-
-bash
-Copy
-Edit
+```
 eb init -p python-3.7 flask-app
-Create the Elastic Beanstalk Environment:
 
+Create the Elastic Beanstalk Environment:
 ```
 eb create flask-env
+
 Deploy the Frontend:
+
 After the environment is created, deploy the frontend:
 
 ```
 eb deploy
+
 The application will now be accessible via the provided URL (e.g., http://kissaproject0572.eba-hqs3ana7.ap-southeast-2.elasticbeanstalk.com/).
 
 EC2 (Backend)
